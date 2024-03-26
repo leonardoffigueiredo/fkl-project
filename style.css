@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #2ea1ff;
+    background-color: black;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -19,7 +19,7 @@ body {
     height: 60px;
     font-family: Roboto;
     border-bottom: 0.01px solid #000000;
-    background-color: #2ea1ff;
+    background-color: #red;
 }
 
 #TopNav>li {
