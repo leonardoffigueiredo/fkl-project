@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LFK Vibe</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="style-tendencias.css">
+    <link rel="icon" href="images/officc.svg" type="image/png">
+
+    <style>
+        #construction {
+            text-align: center;
+            margin-top: 325px;
+            font-size: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #construction h1::after {
+            content: '|';
+            display: inline-block;
+            animation: cursorBlink 0.7s infinite alternate;
+        }
+
+        @keyframes cursorBlink {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #construction h1,
+        h2 {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 4s steps(40) forwards;
+        }
+
+        #construction h2 {
+            display: none;
+         
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="TopNav">
+        <li id="Identity">
+            <strong>
+                <p>LFK Vibe</p>
+            </strong>
+        </li>
+        <li id="SearchBox">
+            <input type="search" id="SearchInput" placeholder="Pesquisar..." style="color: #001B2E;">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </li>
+        <li class="Normalink">
+            <button><i class="fa-solid fa-cloud-arrow-up"></i>Upload</button>
+        </li>
+        <li class="Normalink notfication"><i class="fa-regular fa-bell" style="color: #001B2E;"></i></li>
+        <a href="" id="loginBtn">
+            <li class="account"><img src="/images/pp.png"></li>
+        </a>
+
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" placeholder="Usúario" required>
+                    <input type="password" placeholder="Senha" required>
+                    <label for="rememberMe"><input type="checkbox" id="rememberMe"> Lembre de mim</label>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="forgot-password"><a href="#" id="forgotPassword">Esqueci a senha</a></p>
+                <p class="register">Não tem uma conta? <a href="#">Registre-se</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="sideNav">
+            <li><i class="fa-solid fa-house"></i>
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+            </li>
+            <li><i class="fa-solid fa-clock"></i>
+                <a href="historico.html">
+                <p>Histórico</p>
+            </li>
+            <li><i class="fa-solid fa-meteor"></i>
+                <a href="tendencias.html">
+                <p>tendência</p>
+            </li>
+            <li><i class="fa-solid fa-heart"></i>
+                <a href="seguidores.html">
+                    <p>Seguidores</p>
+                </a>
+            </li>
+        </div>
+    </header>
+
+    <main id="hoomee">
+        <section>
+            <div id="construction">
+                <h1>ESSA GUIA DO SITE AINDA ESTÁ EM PROCESSO DE DESENVOLVIMENTO...</h1>
+                <h2>Para saber entre em contato: (11) 9 8765-4321</h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; LFK
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var loginBtn = document.getElementById('loginBtn');
+            var loginPopup = document.getElementById('loginPopup');
+            var closeBtn = document.querySelector('.close');
+            var forgotPasswordLink = document.getElementById('forgotPassword');
+
+            loginBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                loginPopup.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', function () {
+                loginPopup.style.display = 'none';
+            });
+
+            forgotPasswordLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert("Por favor, entre em contato com o suporte para redefinir sua senha.");
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == loginPopup) {
+                    loginPopup.style.display = 'none';
+                }
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log('Login realizado');
+                loginPopup.style.display = 'none';
+            });
+
+           
+            var constructionH1 = document.querySelector('#construction h1');
+            var constructionH2 = document.querySelector('#construction h2');
+
+            constructionH1.addEventListener('animationend', function () {
+                constructionH2.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

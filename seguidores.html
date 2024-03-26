@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LFK Vibe</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="/style-seguidores.css">
+    <link rel="icon" href="images/officc.svg" type="image/png">
+</head>
+
+<body>
+    <nav id="TopNav">
+        <li id="Identity">
+            <strong>
+                <p>LFK Vibe</p>
+            </strong>
+        </li>
+        <li id="SearchBox">
+            <input type="search" id="SearchInput" placeholder="Pesquisar..." style="color: #001B2E;">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </li>
+        <li class="Normalink">
+            <button><i class="fa-solid fa-cloud-arrow-up"></i>Upload</button>
+        </li>
+        <li class="Normalink notfication"><i class="fa-regular fa-bell" style="color: #001B2E;"></i></li>
+        <a href="" id="loginBtn">
+            <li class="account"><img src="/images/pp.png"></li>
+        </a>
+
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" placeholder="Usúario" required>
+                    <input type="password" placeholder="Senha" required>
+                    <label for="rememberMe"><input type="checkbox" id="rememberMe"> Lembre de mim</label>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="forgot-password"><a href="#" id="forgotPassword">Esqueci a senha</a></p>
+                <p class="register">Não tem uma conta? <a href="#">Registre-se</a></p>
+            </div>
+        </div>
+
+    </nav>
+    <header>
+        <div class="sideNav">
+            <li><i class="fa-solid fa-house"></i>
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+            </li>
+
+            <li><i class="fa-solid fa-clock"></i>
+                <a href="historico.html">
+                    <p>Histórico</p>
+                </a>
+            </li>
+            <li><i class="fa-solid fa-meteor"></i>
+                <a href="tendencias.html">
+                    <p>tendência</p>
+                </a>
+            </li>
+            <li><i class="fa-solid fa-heart"></i>
+                <a href="seguidores.html">
+                    <p>Seguidores</p>
+                </a>
+            </li>
+        </div>
+    </header>
+    <main id="hoomee">
+        <section>
+            <div class="container">
+                <h1 style="margin-bottom: 29px; font-size: 29px;">Seja bem-vindo(a)!</h1>
+                <div id="nameForm">
+                    <p>Qual o Seu Nome?</p>
+                    <input type="text" id="nameInput" placeholder="Digite seu nome" class="inn">
+                    <label for="imageLink" class="inn">Link da Imagem:</label>
+                    <input type="text" id="imageLink" placeholder="Cole o link da imagem aqui">
+                    <button onclick="updateImage()">Completar Perfil</button>
+                </div>
+                <div class="follower-profile" id="profileDisplay" style="display: none;">
+                    <img id="profileImage" src="" alt="Perfil da Pessoa">
+                    <div id="nameDisplay">
+                        <h2></h2>
+                    </div>
+                    <h4>Seguidores: <span id="followers-count"></span></h4>
+                    <h4>Músicas Favoritadas: <span id="favorite-songs"></span></h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy;LFK
+                <span class="hover-background"></span>
+            </p>
+        </div>
+    </footer>
+    <script>
+        function updateImage() {
+            const name = document.getElementById("nameInput").value.trim();
+            const imageUrl = document.getElementById("imageLink").value.trim();
+            if (name !== '' && imageUrl !== '') {
+                const profileImage = document.getElementById("profileImage");
+                const nameDisplay = document.getElementById("nameDisplay");
+                const followersCount = document.getElementById("followers-count");
+                const favoriteSongs = document.getElementById("favorite-songs");
+
+                profileImage.src = imageUrl;
+                nameDisplay.innerHTML = "<h2>" + name + "</h2>";
+                followersCount.textContent = generateRandomNumber(10, 9999999).toLocaleString('pt-BR');
+                favoriteSongs.textContent = generateRandomNumber(1, 500).toLocaleString('pt-BR');
+                document.getElementById("nameForm").style.display = "none";
+                document.getElementById("profileDisplay").style.display = "block";
+            }
+        }
+
+        function generateRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //login
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var loginBtn = document.getElementById('loginBtn');
+            var loginPopup = document.getElementById('loginPopup');
+            var closeBtn = document.querySelector('.close');
+            var forgotPasswordLink = document.getElementById('forgotPassword');
+
+            loginBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                loginPopup.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', function () {
+                loginPopup.style.display = 'none';
+            });
+
+            forgotPasswordLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert("Por favor, entre em contato com o suporte para redefinir sua senha.");
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == loginPopup) {
+                    loginPopup.style.display = 'none';
+                }
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log('Login realizado');
+                loginPopup.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LFK Vibe</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/officc.svg" type="image/png">
+</head>
+
+<body>
+    <nav id="TopNav">
+        <li id="Identity">
+            <strong>
+                <p>LFK Vibe</p>
+            </strong>
+        </li>
+        <li id="SearchBox">
+            <input type="search" id="SearchInput" placeholder="Pesquisar..." style="color: #001B2E;">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </li>
+        <li class="Normalink">
+            <button><i class="fa-solid fa-cloud-arrow-up"></i>Upload</button>
+        </li>
+        <li class="Normalink notfication"><i class="fa-regular fa-bell" style="color: #001B2E;"></i></li>
+        <a href="" id="loginBtn">
+            <li class="account"><img src="images/pp.png"></li>
+        </a>
+
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" placeholder="Usúario" required>
+                    <input type="password" placeholder="Senha" required>
+                    <label for="rememberMe"><input type="checkbox" id="rememberMe"> Lembre de mim</label>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="forgot-password"><a href="#" id="forgotPassword">Esqueci a senha</a></p>
+                <p class="register">Não tem uma conta? <a href="#">Registre-se</a></p>
+            </div>
+        </div>
+    </nav>
+    <main id="hoomee">
+        <div class="sideNav">
+            <li><i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </li>
+
+            <li><i class="fa-solid fa-clock"></i>
+                <a href="historico.html">
+                    <p>Histórico</p>
+                </a>
+            </li>
+            <li><i class="fa-solid fa-meteor"></i>
+                <a href="tendencias.html">
+                    <p>tendência</p>
+                </a>
+            </li>
+            <li><i class="fa-solid fa-heart"></i>
+                <a href="seguidores.html">
+                    <p>Seguidores</p>
+                </a>
+            </li>
+        </div>
+        <section>
+            <div class="categories">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">Rock</li>
+                    <li class="swiper-slide">Pop</li>
+                    <li class="swiper-slide">Jazz</li>
+                    <li class="swiper-slide">Blues</li>
+                    <li class="swiper-slide">Rap</li>
+                    <li class="swiper-slide">Sertanejo</li>
+                    <li class="swiper-slide">Classico</li>
+                    <li class="swiper-slide">Electronica</li>
+                    <li class="swiper-slide">Reggae</li>
+                    <li class="swiper-slide">Hip Hop</li>
+                    <li class="swiper-slide">Folk</li>
+                    <li class="swiper-slide">Soul</li>
+                    <li class="swiper-slide">R&B</li>
+                    <li class="swiper-slide">Funk</li>
+                    <li class="swiper-slide">Metal</li>
+                    <li class="swiper-slide">Gospel</li>
+                    <li class="swiper-slide">Indie</li>
+                    <li class="swiper-slide">Forró</li>
+                    <li class="swiper-slide">Samba</li>
+                    <li class="swiper-slide">Opera</li>
+                </ul>
+            </div>
+            <div>
+
+            </div>
+
+            <div class="MainSlider swiper-container">
+                <h1 style="font-size: 40px;">Músicas em destaque:</h1>
+                <div class="swiper-wrapper" id="slideHolder">
+                    <div class="swiper-slide"><img src="images/al05.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/al04.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/al01.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            </div>
+            </div>
+            <div class="CardContainer">
+                <div class="card">
+                    <div class="card-thumbnail"><img src="images/al00.png" alt=""></div>
+                    <div class="card-title">A internet é tóxica</div>
+                    <div class="card-author">Mc Saci e Mc Pretchako </div>
+                    <div class="card-extra-detail">
+                        <p class="card-views">11.629.042 de views |</p>
+                        <p class="card-DOB">| 6 meses atrás</p>
+                        <a href="https://www.youtube.com/watch?v=TvX29A17-Kk"><button class="play"><i
+                                    class="fa-solid fa-play"></i></button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-thumbnail"><img src="images/al01.png" alt=""></div>
+                    <div class="card-title">Save Your Tears</div>
+                    <div class="card-author">The Weeknd & Ariana Grande </div>
+                    <div class="card-extra-detail">
+                        <p class="card-views">257.321.528 de views |</p>
+                        <p class="card-DOB">| há 2 anos atrás</p>
+                        <a href="https://www.youtube.com/watch?v=LIIDh-qI9oI"><button class="play"><i
+                                    class="fa-solid fa-play"></i></button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-thumbnail"><img src="images/al02.png" alt=""></div>
+                    <div class="card-title">Barulho do Foguete</div>
+                    <div class="card-author">Zé Neto e Cristiano</div>
+                    <div class="card-extra-detail">
+                        <p class="card-views">160.070.494 de views |</p <p class="card-DOB">| 8 meses atrás</p>
+                        <a href="https://www.youtube.com/watch?v=7t5mi3M_lAY&list=RD7t5mi3M_lAY&start_radio=1"><button
+                                class="play"><i class="fa-solid fa-play"></i></button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-thumbnail"><img src="images/al03.png" alt=""></div>
+                    <div class="card-title">Raridade</div>
+                    <div class="card-author">Anderson Freire</div>
+                    <div class="card-extra-detail">
+                        <p class="card-views"> 257.321.528 de views |</p>
+                        <p class="card-DOB">| há 9 anos atrás</p>
+                        <a href="https://www.youtube.com/watch?v=Tqdi6BZUWr4"><button class="play"><i
+                                    class="fa-solid fa-play"></i></button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-thumbnail"><img src="images/al05.png" alt=""></div>
+                    <div class="card-title">Vampiro</div>
+                    <div class="card-author">Matuê. Teto e Wiu </div>
+                    <div class="card-extra-detail">
+                        <p class="card-views">136.601.504 de views |</p>
+                        <p class="card-DOB">| há 1 ano</p>
+                        <a href="https://www.youtube.com/watch?app=desktop&v=TKqa-ZXGKYA"><button class="play"><i
+                                    class="fa-solid fa-play"></i></button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-thumbnail"><img src="images/al04.png" alt=""></div>
+                    <div class="card-title"> Melhor eu ir</div>
+                    <div class="card-author">Menos é mais </div>
+                    <div class="card-extra-detail">
+                        <p class="card-views">884.786.608 de views |</p>
+                        <p class="card-DOB">| há 4 anos atrás</p>
+                        <a
+                            href="https://www.youtube.com/watch?v=zKAAFsovtM4&list=RDGMEMYvZjTda73N9EL0Qo2TnYngVMzKAAFsovtM4&start_radio=1"><button
+                                class="play"><i class="fa-solid fa-play"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy;LFK
+                <span class="hover-background"></span>
+            </p>
+        </div>
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script>
+    <script src="./script.js"></script>
+    <script>
+        const swiper = new Swiper('.MainSlider', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var loginBtn = document.getElementById('loginBtn');
+            var loginPopup = document.getElementById('loginPopup');
+            var closeBtn = document.querySelector('.close');
+            var forgotPasswordLink = document.getElementById('forgotPassword');
+
+            loginBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                loginPopup.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', function () {
+                loginPopup.style.display = 'none';
+            });
+
+            forgotPasswordLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert("Por favor, entre em contato com o suporte para redefinir sua senha.");
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == loginPopup) {
+                    loginPopup.style.display = 'none';
+                }
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log('Login realizado');
+                loginPopup.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

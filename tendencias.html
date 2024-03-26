@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LFK Vibe</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="style-tendencias.css">
+    <link rel="icon" href="images/officc.svg" type="image/png">
+</head>
+
+<body>
+    <nav id="TopNav">
+        <li id="Identity">
+            <strong>
+                <p>LFK Vibe</p>
+            </strong>
+        </li>
+        <li id="SearchBox">
+            <input type="search" id="SearchInput" placeholder="Pesquisar..." style="color: #001B2E;">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </li>
+        <li class="Normalink">
+            <button><i class="fa-solid fa-cloud-arrow-up"></i>Upload</button>
+        </li>
+        <li class="Normalink notfication"><i class="fa-regular fa-bell" style="color: #001B2E;"></i></li>
+        <a href="" id="loginBtn">
+            <li class="account"><img src="/images/pp.png"></li>
+        </a>
+
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" placeholder="Usúario" required>
+                    <input type="password" placeholder="Senha" required>
+                    <label for="rememberMe"><input type="checkbox" id="rememberMe"> Lembre de mim</label>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="forgot-password"><a href="#" id="forgotPassword">Esqueci a senha</a></p>
+                <p class="register">Não tem uma conta? <a href="#">Registre-se</a></p>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <header>
+        <div class="sideNav">
+            <li><i class="fa-solid fa-house"></i>
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+            </li>
+            <li><i class="fa-solid fa-clock"></i>
+                <a href="historico.html">
+                    <p>Histórico</p>
+                </a>
+            </li>
+            <li><i class="fa-solid fa-meteor"></i>
+                <p>tendência</p>
+            </li>
+            <li><i class="fa-solid fa-heart"></i>
+                <a href="seguidores.html">
+                    <p>Seguidores</p>
+                </a>
+            </li>
+        </div>
+    </header>
+    <main id="hoomee">
+        <section>
+            <div id="tendencias" class="container">
+                <h1>Tendências Musicais</h1>
+                <ol id="lista-tendencias"></ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy;LFK
+                <span class="hover-background"></span>
+            </p>
+        </div>
+    </footer>
+    <script>
+        const musicasTendencia = [
+
+            {
+                nome: "Vamo de Pagodin",
+                artista: "MC Paulin da Capital, Ryan SP, Piedro e Daniel",
+                views: "6.1M",
+                lancamento: "2024-03-14",
+                capa: "pagodin.png",
+                link: "https://www.youtube.com/watch?v=-UDWqs7TsTg"
+            },
+            {
+                nome: "Na Defender",
+                artista: "Luan Pereira, Mc Daniel",
+                views: "3.3M",
+                lancamento: "2024-03-22",
+                capa: "defender.png",
+                link: "https://www.youtube.com/watch?v=1JPoKc3ivXk"
+            },
+
+            {
+                nome: "Deus Por Favor",
+                artista: "Mc Kevin, Mc IG, Mc PH",
+                views: "3.1M",
+                lancamento: "2024-03-22",
+                capa: "pfvr.png",
+                link: "https://www.youtube.com/watch?v=SMy296dvtMQ"
+            },
+
+
+        ];
+
+
+        function exibirTendencias() {
+            const listaTendencias = document.getElementById("lista-tendencias");
+            musicasTendencia.forEach((musica, index) => {
+                const listItem = document.createElement("li");
+                const tempoDecorrido = calcularTempoDecorrido(musica.lancamento);
+                listItem.innerHTML = `
+                    <a href="${musica.link}">
+                        <div class="musica">
+                            <img src="/images/${musica.capa}" alt="Capa da Música ${musica.nome}">
+                            <div class="info">
+                                <p class="nome">${musica.nome}</p>
+                                <p class="artista">${musica.artista}</p>
+                                <p class="views">Views: ${musica.views}</p>
+                                <p class="lancamento">Lançamento: ${tempoDecorrido}</p>
+                            </div>
+                        </div>
+                    </a>
+                `;
+                listaTendencias.appendChild(listItem);
+            });
+        }
+
+        function calcularTempoDecorrido(dataLancamento) {
+            const lancamento = new Date(dataLancamento);
+            const agora = new Date();
+            const diferenca = agora.getTime() - lancamento.getTime();
+            const diasDecorridos = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            return `${diasDecorridos} dias atrás`;
+        }
+        document.addEventListener("DOMContentLoaded", exibirTendencias);
+
+        //login
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var loginBtn = document.getElementById('loginBtn');
+            var loginPopup = document.getElementById('loginPopup');
+            var closeBtn = document.querySelector('.close');
+            var forgotPasswordLink = document.getElementById('forgotPassword');
+
+            loginBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                loginPopup.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', function () {
+                loginPopup.style.display = 'none';
+            });
+
+            forgotPasswordLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert("Por favor, entre em contato com o suporte para redefinir sua senha.");
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == loginPopup) {
+                    loginPopup.style.display = 'none';
+                }
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log('Login realizado');
+                loginPopup.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
