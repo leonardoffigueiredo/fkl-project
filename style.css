@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #2ea1ff;
+    background-color: rgb(20, 20, 20);
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -18,8 +18,8 @@ body {
     width: 100%;
     height: 60px;
     font-family: Roboto;
-    border-bottom: 0.01px solid #000000;
-    background-color: #2ea1ff;
+    border-bottom: 0.01px solid white;
+    background-color: rgb(20, 20, 20);
 }
 
 #TopNav>li {
@@ -31,7 +31,7 @@ body {
     display: flex;
     font-size: .9rem;
     font-family: 'Roboto';
-    color: #001B2E;
+    color: white;
 
     padding: 5px;
     margin-left: 20px;
@@ -46,21 +46,21 @@ body {
     padding: 10px;
     display: flex;
     flex: 1;
-    color: #001B2E;
+    color: white;
 }
 
 #TopNav>#SearchBox>#SearchInput {
     padding: 10px;
     border-radius: 20px;
 
-    border: 2px solid #001B2E;
+    border: 2px solid white;
     flex: 1;
 }
 
 #TopNav>#SearchBox>button {
     padding: 0px 20px;
     border-bottom-right-radius: 20px;
-    border: 2px solid #001B2E;
+    border: 2px solid white;
     position: relative;
     left: -20px;
     font-size: 1.2rem;
@@ -86,8 +86,8 @@ body {
     gap: 5px;
     font-size: 1rem;
     border: none;
-    background-color: #001B2E;
-    color: #f9f9fa;
+    background-color: green;
+    color: white;
     cursor: pointer;
     font-weight: 700;
 }
@@ -105,7 +105,7 @@ body {
     font-size: 0.9rem;
     position: absolute;
     right: 5px;
-    background-color: red;
+    background-color: green;
     top: 13px;
     cursor: pointer;
 }
@@ -132,7 +132,7 @@ li {
 }
 
 .account img:hover {
-    background-color: #00ff37;
+    background-color: green;
     border: #000000 solid;
 }
 
@@ -140,9 +140,9 @@ li {
 .sideNav {
     width: 17%;
     height: 100%;
-    border-right: 2px solid #000000;
+    border-right: 2px solid white;
     font-family: Roboto;
-    color: #001B2E;
+    color: white;
     display: flex;
     flex-direction: column;
 }
@@ -164,7 +164,7 @@ li {
 }
 
 .sideNav li:hover {
-    background-color: #00ff37;
+    background-color: green;
 }
 
 section {
@@ -187,14 +187,14 @@ main {
     height: auto;
     position: sticky;
     top: 0px;
-    background-color: #2ea1ff;
+    background-color: rgb(20, 20, 20);
     z-index: 10;
     display: flex;
     overflow: hidden;
     list-style-type: none;
     cursor: pointer;
     padding: 10px;
-    color: #001B2E;
+    color: white;
 
     gap: 10px;
 }
@@ -211,8 +211,8 @@ main {
 }
 
 .categories li:hover {
-    border: 2px solid #1b4626;
-    background-color: #00ff37;
+    border: 2px solid white;
+    background-color: green;
 }
 
 .MainSlider {
@@ -235,7 +235,7 @@ main {
     position: relative;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
-    color: #001B2E;
+    color: white;
 }
 
 .card-thumbnail {
@@ -262,7 +262,7 @@ main {
     padding: 0px 15px;
     font-size: 0.9rem;
     font-weight: lighter;
-    color: #001B2E;
+    color: white;
 }
 
 .card-extra-detail {
@@ -282,12 +282,12 @@ main {
 .play {
     width: 50px;
     height: 50px;
-    background-color: #001B2E;
+    background-color: green;
     cursor: pointer;
     border-radius: 50%;
     border: none;
     right: 25px;
-    color: #03d9ff;
+    color: white;
     font-size: 1.1rem;
     top: 220px;
     position: absolute;
@@ -296,7 +296,8 @@ main {
 }
 
 .play:hover {
-    color: #00ff37;
+    color: black;
+    background-color: #00ff37;
     transform: translateY(-3px);
 
 }
@@ -326,12 +327,12 @@ main {
 
 .swiper-pagination-bullet {
     opacity: 1;
-    border: 1px solid #001B2E;
+    border: 1px solid white;
     background-color: white;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #EE4266;
+    background-color: green;
 
 }
 
@@ -414,7 +415,7 @@ main {
 }
 
 footer {
-    background-color: #001B2E;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -465,7 +466,7 @@ main a {
 
 nav button {
     color: white;
-    background-color: #007bff;
+    background-color: green;
 }
 
 nav button:hover {
@@ -491,7 +492,7 @@ nav button:hover {
 
 
 .popup-content {
-    background-color: #ffffff;
+    background-color: rgb(20, 20, 20);
     margin: 10% auto;
     padding: 30px;
     border-radius: 10px;
@@ -501,7 +502,7 @@ nav button:hover {
 }
 
 .close {
-    color: #aaa;
+    color: #ffffff;
     position: absolute;
     top: 10px;
     right: 15px;
@@ -511,7 +512,7 @@ nav button:hover {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 h2 {
@@ -542,7 +543,7 @@ input[type="checkbox"] {
 
 
 button[type="submit"] {
-    background-color: #007bff;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 5px;
@@ -550,7 +551,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    color: black;
+    background-color: #00ff37;
 }
 
 .forgot-password,
@@ -560,11 +562,15 @@ button[type="submit"]:hover {
 
 .forgot-password a,
 .register a {
-    color: #007bff;
+    color: green;
     text-decoration: none;
 }
 
 .forgot-password a:hover,
 .register a:hover {
     text-decoration: underline;
+}
+
+p {
+    color: white;
 }

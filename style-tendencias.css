@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #2ea1ff;
+    background-color: rgb(20, 20, 20);
     overflow-x: hidden;
 }
 
@@ -15,8 +15,9 @@ body {
     width: 100%;
     height: 60px;
     font-family: Roboto;
-    border-bottom: 0.01px solid #000000;
-    background-color: #2ea1ff;
+    border-bottom: 0.01px solid white;
+    background-color: rgb(20, 20, 20);
+
 }
 
 #TopNav>li {
@@ -28,7 +29,7 @@ body {
     display: flex;
     font-size: .9rem;
     font-family: 'Roboto';
-    color: #001B2E;
+    color: white;
     padding: 5px;
     margin-left: 20px;
     align-items: center;
@@ -40,20 +41,20 @@ body {
     padding: 10px;
     display: flex;
     flex: 1;
-    color: #001B2E;
+    color: white;
 }
 
 #TopNav>#SearchBox>#SearchInput {
     padding: 10px;
     border-radius: 20px;
-    border: 2px solid #001B2E;
+    border: 2px solid white;
     flex: 1;
 }
 
 #TopNav>#SearchBox>button {
     padding: 0px 20px;
     border-bottom-right-radius: 20px;
-    border: 2px solid #001B2E;
+    border: 2px solid white;
     position: relative;
     left: -20px;
     font-size: 1.2rem;
@@ -79,8 +80,8 @@ body {
     gap: 5px;
     font-size: 1rem;
     border: none;
-    background-color: #001B2E;
-    color: #f9f9fa;
+    background-color: green;
+    color: white;
     cursor: pointer;
     font-weight: 700;
 }
@@ -98,7 +99,7 @@ body {
     font-size: 0.9rem;
     position: absolute;
     right: 5px;
-    background-color: red;
+    background-color: green;
     top: 13px;
     cursor: pointer;
 }
@@ -121,17 +122,16 @@ body {
 }
 
 .account img:hover {
-    background-image: url(/images/pp-white.png);
-    background-color: #00ff37;
-    border: #000000 solid;
+    background-color: green;
+    border: white solid 1px;
 }
 
 .sideNav {
     width: 200px;
     height: 100%;
-    border-right: 2px solid #000000;
+    border-right: 2px solid white   ;
     font-family: Roboto;
-    color: #001B2E;
+    color: white;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -156,7 +156,7 @@ body {
 }
 
 .sideNav li:hover {
-    background-color: #00ff37;
+    background-color: green;
 }
 
 main {
@@ -178,7 +178,7 @@ main {
     height: 200px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 5px solid #1DB954;
+    border: 5px solid green;
 }
 
 .profile h1 {
@@ -192,7 +192,7 @@ main {
 }
 
 .footer {
-    background-color: #001B2E;
+    background-color: rgb(0, 0, 0);;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -227,14 +227,15 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: green;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    color: black;
+    background-color: #00ff37;
 }
 
 #nameDisplay {
@@ -254,7 +255,7 @@ button:hover {
 
     border-radius: 20px;
 
-    background-color: #fff;
+    background-color: rgb(20, 20, 20);;
 
     padding: 20px;
 
@@ -300,9 +301,9 @@ button:hover {
     width: 200px;
 
     height: 100%;
-    border-right: 2px solid #000000;
+    border-right: 2px solid white;
     font-family: Roboto;
-    color: #001B2E;
+    color: white;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -327,7 +328,7 @@ button:hover {
 }
 
 .sideNav li:hover {
-    background-color: #00ff37;
+    background-color: green;
 }
 
 .main {
@@ -357,7 +358,7 @@ button:hover {
 }
 
 footer {
-    background-color: #001B2E;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -386,7 +387,7 @@ nav,
 li,
 header a {
     text-decoration: none;
-    color: #001B2E;
+    color: #ffffff;
 }
 
 button {
@@ -442,7 +443,7 @@ button:hover {
 #lista-tendencias li {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    border: 2px solid #001B2E;
+    border: 2px solid white;
     border-radius: 10px;
     padding: 33px;
     transition: transform 0.3s ease;
@@ -477,12 +478,12 @@ button:hover {
 }
 
 .info .views {
-    color: #ffffff;
+    color: green;
 }
 
 a {
     text-decoration: none;
-    color: #1f05b4;
+    color: white;
 }
 
 /* POP-UP LOGIN */
@@ -506,7 +507,7 @@ a {
 
 
 .popup-content {
-    background-color: #ffffff;
+    background-color: rgb(20, 20, 20);;
     margin: 10% auto;
     padding: 30px;
     border-radius: 10px;
@@ -545,7 +546,7 @@ button[type="submit"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -558,7 +559,7 @@ input[type="checkbox"] {
 
 
 button[type="submit"] {
-    background-color: #007bff;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 5px;
@@ -566,7 +567,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    color: black;
+    background-color: #00ff37;
 }
 
 .forgot-password,
@@ -576,7 +578,7 @@ button[type="submit"]:hover {
 
 .forgot-password a,
 .register a {
-    color: #007bff;
+    color: green;
     text-decoration: none;
 }
 
